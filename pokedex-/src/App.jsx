@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import PokemonCard from "./components/PokemonCard"
+import NavBar from "./components/NavBar"
 import { useState } from "react";
 
 const pokemonList = [
@@ -53,21 +54,19 @@ const pokemonList = [
   ];
 
 function App() {
-
   const [pokemonIndex, setPokemonIndex] = useState (0);
+  
 
-  const handleBefore = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  }
-  const handleNext = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  }
+
+  
 
   return (
           
-      <div> <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <button onClick={handleBefore}>Precedent </button>
-      <button onClick={handleNext}>Suivant </button>
+      <div> 
+        
+        <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+        <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>
+     
      
        </div>
   )
