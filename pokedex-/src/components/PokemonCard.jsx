@@ -15,15 +15,15 @@ return (
 
 }
 
-PokemonCard.PropTypes = {
-  pokemon: PropTypes.shape({
-  name: PropTypes.arrayOf(PropTypes.string).isRequired,
-  imgSrc: PropTypes.string,
+// PokemonCard.PropTypes = {
+//   pokemon: PropTypes.shape({
+//   name: PropTypes.arrayOf(PropTypes.string).isRequired,
+//   imgSrc: PropTypes.string,
   
-}),
+// }),
 
-}
-console.log(PokemonCard.PropTypes.pokemon);
+// }
+
 
 
 

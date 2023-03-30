@@ -1,6 +1,6 @@
 
 
-const NavBar = ({pokemonIndex, setPokemonIndex}) => {
+const NavBar = ({pokemon, pokemonIndex, setPokemonIndex}) => {
 
    
 
@@ -10,13 +10,17 @@ const handleBefore = () => {
   const handleNext = () => {
     setPokemonIndex(pokemonIndex + 1);
   }
+ 
+  
+  
+  
 
 
 return (
     
     <div>
-    <button onClick={handleBefore}>Precedent </button>
-    <button onClick={handleNext}>Suivant </button>
+    {pokemonIndex > 0 ? <button onClick={handleBefore}>Precedent </button> : null}
+    {pokemonIndex <pokemon - 1 ? <button onClick={handleNext}>Suivant </button> : null }
     </div>
 )
 

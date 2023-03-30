@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import PokemonCard from "./components/PokemonCard"
 import NavBar from "./components/NavBar"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const pokemonList = [
 
@@ -55,19 +55,30 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState (0);
-  
 
+  useEffect(
+    () => {
+      alert ("hello pokemon trainer :)");   
+    },
+    
+    
+  )
 
+  useEffect(
+    () => {
+      if (pokemonList[pokemonIndex].name === "pikachu"){
+        alert("pika pikachu !!!");
+      }},
+      
+     
+  )
   
 
   return (
           
       <div> 
-        
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-        <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>
-     
-     
+        <NavBar pokemon={pokemonList.length} pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>
        </div>
   )
 }
