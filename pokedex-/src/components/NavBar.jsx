@@ -12,7 +12,9 @@ const handleBefore = () => {
   }
  
   
-  
+  if (pokemonIndex === 3 ){
+    alert ("pika pika !!");
+  }
   
 
 
