@@ -64,19 +64,7 @@ function App() {
     
   // )
 
-  // useEffect(
-  //   () => {
-  //     if (pokemonList[pokemonIndex].name === "pikachu"){
-  //       alert("pika pikachu !!!");
-  //     }},
-      
-     
-  // )
-
-  if ( pokemonIndex === 3){
-    alert("pika")
-  }
-  
+ 
 
   return (
           
