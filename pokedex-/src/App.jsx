@@ -56,29 +56,36 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState (0);
 
-  useEffect(
-    () => {
-      alert ("hello pokemon trainer :)");   
-    },
+  // useEffect(
+  //   () => {
+  //     alert ("hello pokemon trainer :)");   
+  //   },
+  //   []
     
-    
-  )
+  // )
 
-  useEffect(
-    () => {
-      if (pokemonList[pokemonIndex].name === "pikachu"){
-        alert("pika pikachu !!!");
-      }},
+  // useEffect(
+  //   () => {
+  //     if (pokemonList[pokemonIndex].name === "pikachu"){
+  //       alert("pika pikachu !!!");
+  //     }},
       
      
-  )
+  // )
+
+  if ( pokemonIndex === 3){
+    alert("pika")
+  }
   
 
   return (
           
       <div> 
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-        <NavBar pokemon={pokemonList.length} pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>
+        {
+          <NavBar pokemonindex = {pokemonIndex} pokemonList={pokemonList}  setPokemonIndex={setPokemonIndex} />
+        }
+        
        </div>
   )
 }
