@@ -60,6 +60,7 @@ function App() {
     () => {
       alert ("hello pokemon trainer :)");   
     },
+    []
     
     
   )
